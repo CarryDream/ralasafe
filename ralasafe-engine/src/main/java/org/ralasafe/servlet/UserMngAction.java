@@ -26,6 +26,7 @@ public class UserMngAction extends Action {
 
 	private static final Log log=LogFactory.getLog( UserMngAction.class );
 	
+	@Override
 	protected void doGet( HttpServletRequest req, HttpServletResponse resp )
 			throws ServletException, IOException {
 		String oper=req.getParameter( "oper" );
@@ -46,9 +47,9 @@ public class UserMngAction extends Action {
 		// search key
 	    
 		String searchName=req.getParameter( "name" );
-/*		if(searchName!=null){
+		if(searchName!=null){
 			searchName=new String(searchName.getBytes("ISO-8859-1"),"UTF-8");		        
-		}*/
+		}
 		if( RalasafeController.isSecured() ) {
 			log.debug( "Ralasafe is secured. Query granted users..." );
 			User user=WebRalasafe.getCurrentUser( req );

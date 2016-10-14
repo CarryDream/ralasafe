@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ralasafe.iml" filepath="$PROJECT_DIR$/ralasafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ralasafe-engine/ralasafe-engine.iml" filepath="$PROJECT_DIR$/ralasafe-engine/ralasafe-engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ralasafe-manager/ralasafe-manager.iml" filepath="$PROJECT_DIR$/ralasafe-manager/ralasafe-manager.iml" />
+    </modules>
+  </component>
+</project>
