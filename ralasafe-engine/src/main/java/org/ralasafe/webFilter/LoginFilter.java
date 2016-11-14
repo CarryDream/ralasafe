@@ -73,9 +73,11 @@ public class LoginFilter implements Filter {
 
 	// private String redirectLoginPage;
 
+	@Override
 	public void destroy() {
 	}
 
+	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpReq = (HttpServletRequest) (req);
@@ -135,7 +137,7 @@ public class LoginFilter implements Filter {
 	 */
 	private boolean requestForLoginPage(HttpServletRequest httpReq) {
 		String url = httpReq.getServletPath();
-		if (url.toLowerCase().startsWith(loginPage.toLowerCase())) {
+		if (loginPage != null && url.toLowerCase().startsWith(loginPage.toLowerCase())) {
 			// is ralasafe system direct to this page?
 			String flag = (String) httpReq.getSession().getAttribute(
 					RALASAFE_REQUEST_LOGIN);
@@ -178,7 +180,6 @@ public class LoginFilter implements Filter {
 				fromPath = subUrl.substring(subUrl.indexOf(contextPath)	+ contextPath.length());
 			}
 		}
-
 		return fromPath.toLowerCase().startsWith(loginPage.toLowerCase());
 	}
 
@@ -241,6 +242,7 @@ public class LoginFilter implements Filter {
 		return null;
 	}
 
+	@Override
 	public void init(FilterConfig config) throws ServletException {
 		String rawUniqueFieldsParams = config
 				.getInitParameter("uniqueFieldsParams");

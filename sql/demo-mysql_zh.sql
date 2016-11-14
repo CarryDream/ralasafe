@@ -15,11 +15,11 @@
 
 
 --
--- Create schema zh_mydemo
+-- Create schema mydemo
 --
 
-CREATE DATABASE IF NOT EXISTS zh_mydemo;
-USE zh_mydemo;
+CREATE DATABASE IF NOT EXISTS mydemo;
+USE mydemo;
 
 --
 -- Temporary table structure for view `userview`
@@ -290,11 +290,11 @@ CREATE TABLE `spec_user` (
 /*!40000 ALTER TABLE `spec_user` ENABLE KEYS */;
 
 --
--- Create schema zh_ralasafe
+-- Create schema ralasafe
 --
 
-CREATE DATABASE IF NOT EXISTS zh_ralasafe;
-USE zh_ralasafe;
+CREATE DATABASE IF NOT EXISTS ralasafe;
+USE ralasafe;
 
 --
 -- Definition of table `application`
@@ -683,11 +683,11 @@ INSERT INTO `usertype` (`name`,`description`,`userMetadataXML`) VALUES
 /*!40000 ALTER TABLE `usertype` ENABLE KEYS */;
 
 --
--- Create schema zh_mydemo
+-- Create schema mydemo
 --
 
-CREATE DATABASE IF NOT EXISTS zh_mydemo;
-USE zh_mydemo;
+CREATE DATABASE IF NOT EXISTS mydemo;
+USE mydemo;
 
 --
 -- Definition of view `userview`
